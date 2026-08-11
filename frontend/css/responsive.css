@@ -1,0 +1,82 @@
+/* ==========================================================
+   RESPONSIVE BREAKPOINTS
+   Mobile-first content is already fine by default because our
+   base CSS uses flexible units (%, fr, clamp). These rules
+   handle the layout shifts: multi-column -> stacked, and the
+   navbar -> hamburger menu.
+   ========================================================== */
+
+/* ----- Tablet: 900px and below ----- */
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    height: 340px;
+    order: -1; /* show the visual above the copy on smaller screens */
+  }
+
+  .tab-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ----- Mobile: 640px and below ----- */
+@media (max-width: 640px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .primary-nav {
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    background: var(--color-paper-raised);
+    border-bottom: 1px solid var(--color-line);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+
+  .primary-nav.open {
+    max-height: 320px;
+  }
+
+  .primary-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 24px 20px;
+  }
+
+  .primary-nav li {
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .primary-nav a {
+    display: block;
+    padding: 14px 0;
+  }
+
+  .nav-actions .btn-ghost {
+    display: none; /* keep mobile header simple: one primary action */
+  }
+
+  .tab-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+  }
+
+  .footer-nav {
+    gap: 32px;
+  }
+}
