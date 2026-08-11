@@ -1,0 +1,153 @@
+/* ==========================================================
+   AUTH PAGES (login / signup)
+   Minimal centered-card layout. Reuses tokens from style.css —
+   this file only adds what's specific to auth screens.
+   ========================================================== */
+
+.auth-page {
+  min-height: calc(100vh - 76px); /* full viewport minus navbar height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--color-paper-raised);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 40px 36px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* thin accent line along the top edge of the card — the one
+   "signature" touch, echoes the clay accent used elsewhere */
+.auth-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--color-clay);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.auth-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-slate);
+  margin: 0 0 10px;
+}
+
+.auth-header h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.auth-header p {
+  color: var(--color-ink-soft);
+  font-size: 0.92rem;
+  margin: 8px 0 0;
+}
+
+/* ----- Form ----- */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.form-field input {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 12px 14px;
+  border: 1px solid var(--color-line);
+  border-radius: 10px;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-field input:focus {
+  outline: none;
+  border-color: var(--color-slate);
+  box-shadow: 0 0 0 3px rgba(95, 122, 138, 0.18);
+}
+
+.field-hint {
+  font-size: 0.78rem;
+  color: var(--color-ink-soft);
+}
+
+.field-error {
+  font-size: 0.78rem;
+  color: #B23A3A;
+  display: none; /* JS will toggle this on when a field is invalid */
+}
+
+.form-field.invalid input {
+  border-color: #B23A3A;
+}
+.form-field.invalid .field-error {
+  display: block;
+}
+
+.form-row-split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.form-row-split a {
+  color: var(--color-slate);
+  font-weight: 600;
+}
+.form-row-split a:hover { color: var(--color-clay-dark); }
+
+.auth-submit {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.auth-footer-note {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+  margin-top: 22px;
+}
+
+.auth-footer-note a {
+  color: var(--color-clay-dark);
+  font-weight: 600;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}
+
+.checkbox-row input { margin-top: 3px; }
