@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up — DailyTrack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">DailyTrack</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="daily.html">Daily Routine</a></li>
+          <li><a href="health.html">Health</a></li>
+          <li><a href="diary.html">Diary</a></li>
+          <li><a href="timetable.html">Time Table</a></li>
+          <li><a href="progress.html">Progress</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost">Log in</a>
+        <a href="signup.html" class="btn btn-primary">Start Your Day</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-page">
+    <div class="auth-card">
+      <div class="auth-header">
+        <p class="auth-eyebrow">Start your day, differently</p>
+        <h1>Create your account</h1>
+        <p>Takes under a minute. You'll set up your routine right after.</p>
+      </div>
+
+      <form class="auth-form" id="signupForm" novalidate>
+        <div class="form-field" id="signupNameField">
+          <label for="signupName">Name</label>
+          <input type="text" id="signupName" name="name" placeholder="Your name" required />
+          <span class="field-error">Enter your name.</span>
+        </div>
+
+        <div class="form-field" id="signupEmailField">
+          <label for="signupEmail">Email</label>
+          <input type="email" id="signupEmail" name="email" placeholder="you@example.com" required />
+          <span class="field-error">Enter a valid email address.</span>
+        </div>
+
+        <div class="form-field" id="signupPasswordField">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" name="password" placeholder="At least 8 characters" required minlength="8" />
+          <span class="field-hint">Use at least 8 characters.</span>
+          <span class="field-error">Password must be at least 8 characters.</span>
+        </div>
+
+        <div class="form-field" id="signupConfirmField">
+          <label for="signupConfirm">Confirm password</label>
+          <input type="password" id="signupConfirm" name="confirmPassword" placeholder="••••••••" required />
+          <span class="field-error">Passwords don't match.</span>
+        </div>
+
+        <label class="checkbox-row">
+          <input type="checkbox" name="terms" required />
+          I agree to the Terms and Privacy Policy.
+        </label>
+
+        <button type="submit" class="btn btn-primary auth-submit">Create account</button>
+      </form>
+
+      <p class="auth-footer-note">
+        Already have an account? <a href="login.html">Log in</a>
+      </p>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
