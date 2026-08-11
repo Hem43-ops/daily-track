@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DailyTrack — Plan your day. Track your habits. Understand yourself.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER / NAVBAR ============ -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">DailyTrack</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="daily.html">Daily Routine</a></li>
+          <li><a href="health.html">Health</a></li>
+          <li><a href="diary.html">Diary</a></li>
+          <li><a href="timetable.html">Time Table</a></li>
+          <li><a href="progress.html">Progress</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost">Log in</a>
+        <a href="signup.html" class="btn btn-primary">Start Your Day</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">A daily companion, not a dashboard</p>
+          <h1>Plan your day.<br>Track your habits.<br><em>Understand yourself.</em></h1>
+          <p class="hero-sub">
+            DailyTrack blends a routine planner, a health log, and a private diary
+            into one calm place — so reflection and consistency live side by side.
+          </p>
+          <div class="hero-ctas">
+            <a href="signup.html" class="btn btn-primary btn-lg">Start Your Day</a>
+            <a href="#features" class="btn btn-text">See how it works ↓</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="desk-stack">
+            <div class="card card-routine">
+              <p class="card-label">Today's Progress</p>
+              <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
+              <p class="mono-line">06:30 — Wake up</p>
+              <p class="mono-line">08:00 — Study</p>
+              <p class="mono-line">18:00 — Revision</p>
+            </div>
+            <div class="card card-diary">
+              <p class="card-label">Diary · Tuesday</p>
+              <p class="diary-snippet">Today I finally stuck to my morning routine without snoozing...</p>
+            </div>
+            <div class="card card-streak">
+              <p class="card-label">Streak</p>
+              <p class="streak-number">🔥 7 days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NOTEBOOK TABS / FEATURES ============ -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title">Every page of your day, in one notebook</h2>
+        <p class="section-sub">Each tab below is a real section of the app — not a preview.</p>
+
+        <div class="tab-grid">
+          <article class="tab-card">
+            <span class="tab-index">Daily</span>
+            <h3>Routine</h3>
+            <p>Build your day hour by hour, mark it off as you go, and watch your completion bar fill in.</p>
+          </article>
+
+          <article class="tab-card">
+            <span class="tab-index">Health</span>
+            <h3>Lifestyle log</h3>
+            <p>Meals, water, sleep, and activity — tracked simply, on your terms, no diagnoses attached.</p>
+          </article>
+
+          <article class="tab-card">
+            <span class="tab-index">Diary</span>
+            <h3>Reflection</h3>
+            <p>A private, freeform notebook with themes, moods, and tags — written the way you actually think.</p>
+          </article>
+
+          <article class="tab-card">
+            <span class="tab-index">Time Table</span>
+            <h3>Schedule</h3>
+            <p>Plan classes, study blocks, and commitments by day or by week, and never double-book yourself.</p>
+          </article>
+
+          <article class="tab-card">
+            <span class="tab-index">Progress</span>
+            <h3>Patterns</h3>
+            <p>See your real streaks and consistency over time — built from what you actually logged.</p>
+          </article>
+
+          <article class="tab-card">
+            <span class="tab-index">AI</span>
+            <h3>Assistant</h3>
+            <p>Ask for a realistic plan for today, grounded in your own routine and goals — nothing sent without asking.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <h2>Your next entry is one click away.</h2>
+        <a href="signup.html" class="btn btn-primary btn-lg">Create your account</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="brand">DailyTrack</p>
+        <p class="footer-tagline">Plan your day. Track your habits. Understand yourself. Grow every day.</p>
+      </div>
+
+      <nav class="footer-nav">
+        <div class="footer-col">
+          <p class="footer-heading">Product</p>
+          <a href="daily.html">Daily Routine</a>
+          <a href="health.html">Health</a>
+          <a href="diary.html">Diary</a>
+          <a href="timetable.html">Time Table</a>
+          <a href="progress.html">Progress</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Account</p>
+          <a href="login.html">Log in</a>
+          <a href="signup.html">Sign up</a>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+      <p class="footer-copy">© 2026 DailyTrack. A personal project, built to learn.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
