@@ -29,6 +29,9 @@ if (loginForm) {
       // Phase 4/5 will replace this with a real fetch() call to
       // POST /api/auth/login
       console.log('Login form valid. Ready to connect to backend.');
+      //Returning users already completed onboarding, os they skip
+      //straight to dashboard
+      window.location.href='dashboard.html';
     }
   });
 }
@@ -59,6 +62,10 @@ if (signupForm) {
       // Phase 4/5 will replace this with a real fetch() call to
       // POST /api/auth/signup, then redirect to the onboarding form
       console.log('Signup form valid. Ready to connect to backend.');
+
+      //New users haven't set preferences yet,so they go onbpardign 
+      //first-never straight to dashboard
+      window.location.href='onboarding.html';
     }
   });
 }
