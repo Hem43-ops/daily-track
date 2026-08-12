@@ -1,0 +1,219 @@
+/* ==========================================================
+   DASHBOARD
+   A card-grid layout. Each widget is an independent card so
+   we can reorder / resize / add widgets later without
+   restructuring the whole page.
+   ========================================================== */
+
+.dashboard-page {
+  padding: 40px 0 96px;
+}
+
+.dashboard-greeting {
+  margin-bottom: 32px;
+}
+
+.dashboard-greeting h1 {
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  font-weight: 500;
+}
+
+.dashboard-date {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-slate);
+  margin-top: 6px;
+}
+
+/* ----- Grid ----- */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.dash-card {
+  background: var(--color-paper-raised);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 24px;
+}
+
+.dash-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.dash-card-header h2 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.dash-card-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-slate);
+}
+.dash-card-link:hover { color: var(--color-clay-dark); }
+
+/* span sizes, applied per-card so the grid stays flexible */
+.span-2 { grid-column: span 2; }
+.span-4 { grid-column: span 4; }
+
+/* ----- Routine progress card ----- */
+.routine-progress-ring {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.ring-value {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color-clay-dark);
+}
+
+.routine-task-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.routine-task-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.task-time {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--color-slate);
+  min-width: 52px;
+}
+
+.task-done { text-decoration: line-through; color: var(--color-ink-soft); }
+
+.task-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--color-line);
+  flex-shrink: 0;
+}
+.task-dot.done { background: var(--color-clay); }
+
+/* ----- Next up (timetable) card ----- */
+.next-up-time {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  color: var(--color-ink);
+}
+
+.next-up-title { color: var(--color-ink-soft); margin-top: 4px; }
+
+/* ----- Health quick view ----- */
+.health-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.health-stat {
+  background: var(--color-paper);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.health-stat-label {
+  font-size: 0.78rem;
+  color: var(--color-ink-soft);
+}
+
+.health-stat-value {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  margin-top: 4px;
+}
+
+/* ----- Diary card ----- */
+.diary-preview {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-ink);
+  line-height: 1.6;
+}
+
+.diary-preview-date {
+  font-size: 0.78rem;
+  color: var(--color-slate);
+  margin-bottom: 8px;
+  font-family: var(--font-mono);
+  font-style: normal;
+}
+
+/* ----- Streak card ----- */
+.streak-card { text-align: center; }
+.streak-flame { font-size: 2rem; }
+.streak-count {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.streak-label { color: var(--color-ink-soft); font-size: 0.85rem; }
+
+/* ----- AI shortcut card ----- */
+.ai-card {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+.ai-card .dash-card-header h2 { color: var(--color-paper); }
+.ai-card p {
+  color: rgba(241, 243, 238, 0.75);
+  font-size: 0.9rem;
+  margin: 0 0 18px;
+}
+
+/* ----- Weekly bars (progress summary) ----- */
+.week-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 100px;
+  margin-top: 8px;
+}
+
+.week-bar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.week-bar {
+  width: 100%;
+  background: var(--color-line);
+  border-radius: 6px 6px 2px 2px;
+  position: relative;
+}
+
+.week-bar-fill {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: var(--color-slate);
+  border-radius: 6px 6px 2px 2px;
+}
+
+.week-bar-day {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-ink-soft);
+}
