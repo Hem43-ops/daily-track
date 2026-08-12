@@ -1,0 +1,149 @@
+/* ==========================================================
+   ONBOARDING / PERSONALIZATION
+   Reuses tokens from style.css. Introduces the "chip" component
+   — a reusable selectable-pill pattern we'll reuse later for
+   diary tags and timetable categories.
+   ========================================================== */
+
+.onboarding-page {
+  padding: 56px 0 96px;
+}
+
+.onboarding-header {
+  max-width: 640px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.onboarding-header .eyebrow { justify-content: center; display: flex; }
+
+.onboarding-header h1 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 500;
+  margin: 12px 0;
+}
+
+.onboarding-header p {
+  color: var(--color-ink-soft);
+}
+
+/* progress indicator across the top of the form */
+.onboarding-progress {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.progress-dot {
+  width: 34px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--color-line);
+}
+
+.progress-dot.done { background: var(--color-clay); }
+
+/* ----- Category sections ----- */
+.onboarding-form {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.goal-section {
+  background: var(--color-paper-raised);
+  border-radius: var(--radius-lg);
+  padding: 28px 30px;
+  box-shadow: var(--shadow-card);
+}
+
+.goal-section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.goal-section-header h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+}
+
+.goal-count {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-slate);
+}
+
+.goal-section-sub {
+  color: var(--color-ink-soft);
+  font-size: 0.9rem;
+  margin: 0 0 18px;
+}
+
+/* ----- Chip / pill selector ----- */
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  position: relative;
+}
+
+.chip input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.chip-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-ink-soft);
+  background: var(--color-paper);
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.chip input:hover + .chip-label {
+  border-color: var(--color-slate);
+}
+
+.chip input:checked + .chip-label {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-paper-raised);
+}
+
+.chip input:focus-visible + .chip-label {
+  outline: 2px solid var(--color-slate);
+  outline-offset: 2px;
+}
+
+/* ----- Footer actions ----- */
+.onboarding-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.onboarding-skip {
+  color: var(--color-ink-soft);
+  font-size: 0.9rem;
+}
+.onboarding-skip:hover { color: var(--color-ink); }
