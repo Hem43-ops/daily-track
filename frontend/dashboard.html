@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — DailyTrack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">DailyTrack</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav">
+        <ul>
+          <li><a href="dashboard.html" class="active">Home</a></li>
+          <li><a href="daily.html">Daily Routine</a></li>
+          <li><a href="health.html">Health</a></li>
+          <li><a href="diary.html">Diary</a></li>
+          <li><a href="timetable.html">Time Table</a></li>
+          <li><a href="progress.html">Progress</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost">Log out</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard-page">
+    <div class="container">
+
+      <div class="dashboard-greeting">
+        <h1 id="greetingText">Good morning, Alex 🌤️</h1>
+        <p class="dashboard-date" id="todayDate">Tuesday, August 12</p>
+      </div>
+
+      <div class="dashboard-grid">
+
+        <!-- Today's Routine -->
+        <section class="dash-card span-2">
+          <div class="dash-card-header">
+            <h2>Today's Routine</h2>
+            <a href="daily.html" class="dash-card-link">View all →</a>
+          </div>
+          <div class="routine-progress-ring">
+            <span class="ring-value" id="routinePercent">0%</span>
+            <div class="progress-track" style="flex: 1;">
+              <div class="progress-fill" id="routineProgressFill" style="width: 0%;"></div>
+            </div>
+          </div>
+          <ul class="routine-task-list" id="routineTaskList">
+            <!-- populated by dashboard.js -->
+          </ul>
+        </section>
+
+        <!-- Next Up -->
+        <section class="dash-card">
+          <div class="dash-card-header">
+            <h2>Next Up</h2>
+            <a href="timetable.html" class="dash-card-link">Full day →</a>
+          </div>
+          <p class="next-up-time" id="nextUpTime">—</p>
+          <p class="next-up-title" id="nextUpTitle">Nothing scheduled</p>
+        </section>
+
+        <!-- Health quick view -->
+        <section class="dash-card">
+          <div class="dash-card-header">
+            <h2>Health</h2>
+            <a href="health.html" class="dash-card-link">Log more →</a>
+          </div>
+          <div class="health-mini-grid" id="healthMiniGrid">
+            <!-- populated by dashboard.js -->
+          </div>
+        </section>
+
+        <!-- Diary -->
+        <section class="dash-card span-2">
+          <div class="dash-card-header">
+            <h2>Diary</h2>
+            <a href="diary.html" class="dash-card-link">Open diary →</a>
+          </div>
+          <p class="diary-preview-date" id="diaryDate">—</p>
+          <p class="diary-preview" id="diaryPreview">No entries yet.</p>
+        </section>
+
+        <!-- Streak -->
+        <section class="dash-card streak-card">
+          <div class="dash-card-header">
+            <h2>Streak</h2>
+          </div>
+          <p class="streak-flame">🔥</p>
+          <p class="streak-count" id="streakCount">0</p>
+          <p class="streak-label">days in a row</p>
+        </section>
+
+        <!-- AI Assistant shortcut -->
+        <section class="dash-card ai-card">
+          <div class="dash-card-header">
+            <h2>AI Assistant</h2>
+          </div>
+          <p>Ask for a realistic plan based on your routine and goals.</p>
+          <a href="ai.html" class="btn btn-primary">Ask AI</a>
+        </section>
+
+        <!-- Weekly progress summary -->
+        <section class="dash-card span-4">
+          <div class="dash-card-header">
+            <h2>This Week</h2>
+            <a href="progress.html" class="dash-card-link">Full progress →</a>
+          </div>
+          <div class="week-bars" id="weekBars">
+            <!-- populated by dashboard.js -->
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
