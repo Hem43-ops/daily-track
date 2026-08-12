@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personalize DailyTrack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/onboarding.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">DailyTrack</a>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <main class="onboarding-page">
+    <div class="container">
+
+      <div class="onboarding-header">
+        <p class="eyebrow">Step 1 of 1 &nbsp;·&nbsp; Almost there</p>
+        <h1>What do you want to work on?</h1>
+        <p>
+          Pick as many as you like — this shapes your dashboard and what your
+          AI assistant focuses on. Nothing here is a diagnosis, just a starting point.
+        </p>
+        <div class="onboarding-progress">
+          <span class="progress-dot done"></span>
+          <span class="progress-dot done"></span>
+          <span class="progress-dot"></span>
+        </div>
+      </div>
+
+      <form class="onboarding-form" id="onboardingForm">
+
+        <!-- ===== Personal Growth ===== -->
+        <section class="goal-section">
+          <div class="goal-section-header">
+            <h2>Personal Growth</h2>
+            <span class="goal-count" data-count-for="growth">0 selected</span>
+          </div>
+          <p class="goal-section-sub">Reflection-focused goals, tracked through your diary and routine.</p>
+          <div class="chip-group" data-group="growth">
+            <div class="chip">
+              <input type="checkbox" id="growth-confidence" name="growth" value="confidence" />
+              <label class="chip-label" for="growth-confidence">Improve confidence</label>
+            </div>
+            <div class="chip">
+              <input type="checkbox" id="growth-social" name="growth" value="social" />
+              <label class="chip-label" for="growth-social">Feel more socially comfortable</label>
+            </div>
+            <div class="chip">
+              <input type="checkbox" id="growth-communication" name="growth" value="communication" />
+              <label class="chip-label" for="growth-communication">Improve communication</label>
+            </div>
+            <div class="chip">
+              <input type="checkbox" id="growth-consistency" name="growth" value="consistency" />
+              <label class="chip-label" for="growth-consistency">Build consistency</label>
+            </div>
+            <div class="chip">
+              <input type="checkbox" id="growth-procrastination" name="growth" value="procrastination" />
+              <label class="chip-label" for="growth-procrastination">Reduce procrastination</label>
+            </div>
+            <div class="chip">
+              <input type="checkbox" id="growth-emotional" name="growth" value="emotional-awareness" />
+              <label class="chip-label" for="growth-emotional">Improve emotional awareness</label>
+            </div>
+            <div class="chip">
+              <input type="checkbox" id="growth-focus" name="growth" value="focus" />
+              <label class="chip-label" for="growth-focus">Improve focus</label>
+            </div>
+            <div class="chip">
+              <input type="checkbox" id="growth-habits" name="growth" value="habits" />
+              <label class="chip-label" for="growth-habits">Build better habits</label>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== Health & Lifestyle ===== -->
+        <section class="goal-section">
+          <div class="goal-section-header">
+            <h2>Health &amp; Lifestyle</h2>
+            <span class="goal-count" data-count-for="health">0 selected</span>
+          </div>
+          <p class="goal-section-sub">What you'd like to log day-to-day. You control exactly what's tracked.</p>
+          <div class="chip-group" data-group="health">
+            <div class="chip">
+              <input type="checkbox" id="health-meals" name="health" value="meals" />
+              <label class="chip-label" for="health-meals">Track meals</label>
+            </div>
+            <div class="chip">
+              <input type="checkbox" id="health-water" name="health" value="water" />
+              <label class="chip-label" for="health-water">Track water</label>
+            </div>
+            <div class="chip">
+              <input type="checkbox" id="health-sleep" name="health" value="sleep" />
+              <label class="chip-label" for="health-sleep">Track sleep</label>
+            </div>
+            <div class="chip">
+              <input type="checkbox" id="health-exercise" name="health" value="exercise" />
+              <label class="chip-label" for="health-exercise">Track exercise</label>
+            </div>
+            <div class="chip">
+              <input type="checkbox" id="health-activity" name="health" value="activity" />
+              <label class="chip-label" for="health-activity">Track daily activity</label>
+            </div>
+            <div class="chip">
+              <input type="checkbox" id="health-calories" name="health" value="calories" />
+              <label class="chip-label" for="health-calories">Track calorie intake</label>
+            </div>
+            <div class="chip">
+              <input type="checkbox" id="health-routines" name="health" value="healthier-routines" />
+              <label class="chip-label" for="health-routines">Build healthier routines</label>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== Productivity ===== -->
+        <section class="goal-section">
+          <div class="goal-section-header">
+            <h2>Productivity</h2>
+            <span class="goal-count" data-count-for="productivity">0 selected</span>
+          </div>
+          <p class="goal-section-sub">Feeds your Daily Routine and Time Table defaults.</p>
+          <div class="chip-group" data-group="productivity">
+            <div class="chip">
+              <input type="checkbox" id="prod-morning" name="productivity" value="morning-routine" />
+              <label class="chip-label" for="prod-morning">Build a morning routine</label>
+            </div>
+            <div class="chip">
+              <input type="checkbox" id="prod-study" name="productivity" value="study" />
+              <label class="chip-label" for="prod-study">Study consistently</label>
+            </div>
+            <div class="chip">
+              <input type="checkbox" id="prod-time" name="productivity" value="time-management" />
+              <label class="chip-label" for="prod-time">Improve time management</label>
+            </div>
+            <div class="chip">
+              <input type="checkbox" id="prod-tasks" name="productivity" value="tasks" />
+              <label class="chip-label" for="prod-tasks">Track tasks</label>
+            </div>
+            <div class="chip">
+              <input type="checkbox" id="prod-schedule" name="productivity" value="schedule" />
+              <label class="chip-label" for="prod-schedule">Build a daily schedule</label>
+            </div>
+          </div>
+        </section>
+
+        <div class="onboarding-actions">
+          <a href="dashboard.html" class="onboarding-skip">Skip for now</a>
+          <button type="submit" class="btn btn-primary btn-lg">Continue to dashboard</button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <script src="js/onboarding.js"></script>
+</body>
+</html>
