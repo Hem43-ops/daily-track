@@ -1,12 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <container 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diary — DailyTrack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/diary.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
-    
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="dashboard.html" class="brand">DailyTrack</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav">
+        <ul>
+          <li><a href="dashboard.html">Home</a></li>
+          <li><a href="daily.html">Daily Routine</a></li>
+          <li><a href="health.html">Health</a></li>
+          <li><a href="diary.html" class="active">Diary</a></li>
+          <li><a href="timetable.html">Time Table</a></li>
+          <li><a href="progress.html">Progress</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost">Log out</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="diary-page">
+    <div class="container">
+
+      <div class="diary-header">
+        <h1>Diary</h1>
+      </div>
+
+      <div class="diary-layout">
+
+        <!-- Sidebar: search + entry list -->
+        <aside class="diary-sidebar">
+          <input type="search" class="diary-search" id="diarySearch" placeholder="Search entries..." />
+          <button class="btn btn-primary new-entry-btn" id="newEntryBtn">+ New entry</button>
+          <ul class="entry-list" id="entryList">
+            <!-- populated by diary.js -->
+          </ul>
+        </aside>
+
+        <!-- Editor -->
+        <section class="diary-editor">
+          <div class="editor-meta-row">
+            <input type="date" class="editor-date-input" id="editorDate" />
+            <div class="editor-actions">
+              <button class="btn btn-ghost" id="deleteEntryBtn">Delete</button>
+              <button class="btn btn-primary" id="saveEntryBtn">Save</button>
+            </div>
+          </div>
+          <input type="text" class="editor-title-input" id="editorTitle" placeholder="Untitled entry" />
+          <textarea class="editor-content-input" id="editorContent" placeholder="Write freely..."></textarea>
+          <p class="editor-status" id="editorStatus"></p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/diary.js"></script>
 </body>
 </html>
