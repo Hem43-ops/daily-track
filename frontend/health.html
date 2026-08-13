@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health — DailyTrack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/health.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="dashboard.html" class="brand">DailyTrack</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav">
+        <ul>
+          <li><a href="dashboard.html">Home</a></li>
+          <li><a href="daily.html">Daily Routine</a></li>
+          <li><a href="health.html" class="active">Health</a></li>
+          <li><a href="diary.html">Diary</a></li>
+          <li><a href="timetable.html">Time Table</a></li>
+          <li><a href="progress.html">Progress</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost">Log out</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="health-page">
+    <div class="container">
+
+      <div class="health-header">
+        <h1>Health &amp; Lifestyle</h1>
+        <p class="health-disclaimer">
+          A simple lifestyle log based on what you enter — not a medical
+          diagnosis tool. For medical concerns, please consult a professional.
+        </p>
+      </div>
+
+      <div class="health-grid">
+
+        <!-- Water -->
+        <section class="health-card">
+          <h2>Water</h2>
+          <p class="health-card-sub" id="waterGoalText">0 of 8 glasses</p>
+          <div class="water-control">
+            <button class="water-btn" id="waterMinus">−</button>
+            <span class="water-count" id="waterCount">0 glasses</span>
+            <button class="water-btn" id="waterPlus">+</button>
+          </div>
+          <div class="water-glasses" id="waterGlasses"><!-- dots rendered by health.js --></div>
+        </section>
+
+        <!-- Sleep -->
+        <section class="health-card">
+          <h2>Sleep</h2>
+          <p class="health-card-sub">How many hours did you sleep last night?</p>
+          <div class="sleep-input-row">
+            <input type="number" id="sleepHours" min="0" max="24" step="0.5" />
+            <span>hours</span>
+            <button class="btn btn-primary" id="sleepSaveBtn">Save</button>
+          </div>
+        </section>
+
+        <!-- Meals -->
+        <section class="health-card">
+          <h2>Meals</h2>
+          <p class="health-card-sub">Log what you ate and roughly how many calories.</p>
+          <form class="mini-add-form" id="mealForm">
+            <select id="mealType">
+              <option>Breakfast</option>
+              <option>Lunch</option>
+              <option>Dinner</option>
+              <option>Snack</option>
+            </select>
+            <input type="text" id="mealFood" class="flex-grow" placeholder="What did you eat?" required />
+            <input type="number" id="mealCalories" placeholder="Calories" min="0" style="width: 90px;" />
+            <button type="submit" class="btn btn-primary">Add</button>
+          </form>
+          <ul class="mini-list" id="mealList"><!-- populated by health.js --></ul>
+        </section>
+
+        <!-- Activity -->
+        <section class="health-card">
+          <h2>Activity</h2>
+          <p class="health-card-sub">Log any movement or exercise today.</p>
+          <form class="mini-add-form" id="activityForm">
+            <input type="text" id="activityType" class="flex-grow" placeholder="e.g. Walk, Gym, Yoga" required />
+            <input type="number" id="activityDuration" placeholder="Minutes" min="0" style="width: 90px;" />
+            <button type="submit" class="btn btn-primary">Add</button>
+          </form>
+          <ul class="mini-list" id="activityList"><!-- populated by health.js --></ul>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/health.js"></script>
+</body>
+</html>
