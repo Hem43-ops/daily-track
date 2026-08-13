@@ -1,0 +1,12 @@
+{
+  "date": "2026-08-13",
+  "water": { "glasses": 5, "goal": 8 },
+  "sleep": { "hours": 7 },
+  "meals": [
+    { "id": "m1", "meal": "Breakfast", "food": "Oats and banana", "calories": 350 },
+    { "id": "m2", "meal": "Lunch", "food": "Rice and dal", "calories": 520 }
+  ],
+  "activity": [
+    { "id": "a1", "type": "Walk", "duration": 30 }
+  ]
+}
