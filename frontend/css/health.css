@@ -1,0 +1,169 @@
+/* ==========================================================
+   HEALTH PAGE
+   A grid of independent tracking cards — water, sleep, meals,
+   activity. Each card manages its own small piece of the day's
+   log, same underlying pattern as the routine/diary pages.
+   ========================================================== */
+
+.health-page { padding: 40px 0 96px; }
+
+.health-header { margin-bottom: 10px; }
+.health-header h1 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 500;
+}
+.health-disclaimer {
+  color: var(--color-ink-soft);
+  font-size: 0.88rem;
+  margin: 6px 0 28px;
+  max-width: 60ch;
+}
+
+.health-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.health-card {
+  background: var(--color-paper-raised);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 24px;
+}
+
+.health-card h2 {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.health-card-sub {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  margin-bottom: 18px;
+}
+
+/* ----- Water card ----- */
+.water-control {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.water-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--color-line);
+  background: var(--color-paper);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.water-btn:hover { border-color: var(--color-slate); }
+
+.water-count {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  min-width: 90px;
+  text-align: center;
+}
+
+.water-glasses {
+  display: flex;
+  gap: 6px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.water-glass-dot {
+  width: 16px;
+  height: 20px;
+  border-radius: 3px 3px 8px 8px;
+  border: 1.5px solid var(--color-slate);
+  background: transparent;
+}
+.water-glass-dot.filled { background: var(--color-slate); }
+
+/* ----- Sleep card ----- */
+.sleep-input-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sleep-input-row input {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  width: 80px;
+  padding: 8px 10px;
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/* ----- Meals & Activity: mini add-forms + lists ----- */
+.mini-add-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.mini-add-form input,
+.mini-add-form select {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  padding: 8px 10px;
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.mini-add-form .flex-grow { flex: 1; min-width: 100px; }
+
+.mini-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mini-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--color-paper);
+  border-radius: 8px;
+  font-size: 0.88rem;
+}
+
+.mini-list-item-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-slate);
+  text-transform: uppercase;
+}
+
+.mini-list-remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-ink-soft);
+  font-size: 0.9rem;
+}
+.mini-list-remove:hover { color: #B23A3A; }
+
+.mini-list-empty {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  padding: 8px 0;
+}
