@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progress — DailyTrack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/progress.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="dashboard.html" class="brand">DailyTrack</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav">
+        <ul>
+          <li><a href="dashboard.html">Home</a></li>
+          <li><a href="daily.html">Daily Routine</a></li>
+          <li><a href="health.html">Health</a></li>
+          <li><a href="diary.html">Diary</a></li>
+          <li><a href="timetable.html">Time Table</a></li>
+          <li><a href="progress.html" class="active">Progress</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost">Log out</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="progress-page">
+    <div class="container">
+
+      <div class="progress-header">
+        <h1>Your Progress</h1>
+        <p>A look at what you've actually logged — no fabricated numbers.</p>
+      </div>
+
+      <!-- Stat cards -->
+      <div class="stat-row" id="statRow">
+        <!-- populated by progress.js -->
+      </div>
+
+      <!-- Weekly bars + category donut -->
+      <div class="progress-mid-row">
+        <section class="progress-card">
+          <h2>This Week's Routine Completion</h2>
+          <div class="week-bars-large" id="weekBarsLarge">
+            <!-- populated by progress.js -->
+          </div>
+        </section>
+
+        <section class="progress-card">
+          <h2>Time by Category</h2>
+          <div class="donut-wrap">
+            <div class="donut" id="categoryDonut"></div>
+            <div class="donut-legend" id="donutLegend">
+              <!-- populated by progress.js -->
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Monthly consistency grid -->
+      <section class="progress-card ink-grid-card">
+        <h2>Last 4 Weeks — Diary &amp; Routine Consistency</h2>
+        <div class="ink-grid" id="inkGrid">
+          <!-- populated by progress.js -->
+        </div>
+        <div class="ink-grid-scale">
+          <span>Less</span>
+          <span class="ink-cell"></span>
+          <span class="ink-cell level-1"></span>
+          <span class="ink-cell level-2"></span>
+          <span class="ink-cell level-3"></span>
+          <span class="ink-cell level-4"></span>
+          <span>More</span>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/progress.js"></script>
+</body>
+</html>
