@@ -1,0 +1,26 @@
+{
+  "stats": {
+    "routineCompletion": 78,
+    "streakDays": 7,
+    "diaryEntries": 12,
+    "timetableCompletion": 64
+  },
+  "week": [
+    { "day": "Mon", "percent": 80 },
+    { "day": "Tue", "percent": 60 },
+    { "day": "Wed", "percent": 90 },
+    { "day": "Thu", "percent": 50 },
+    { "day": "Fri", "percent": 80 },
+    { "day": "Sat", "percent": 30 },
+    { "day": "Sun", "percent": 0 }
+  ],
+  "categoryBreakdown": {
+    "productivity": 46,
+    "health": 24,
+    "routine": 18,
+    "other": 12
+  },
+  "monthGrid": [
+    1,2,3,0,2,4,3, 2,3,1,0,4,3,2, 1,2,3,4,0,1,2, 3,2,1,0,2,3,4
+  ]
+}
